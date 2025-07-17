@@ -7,7 +7,7 @@ import enums.Options;
 
 public class TableFactory {
     public static void main(String[] args) {
-        Table table = Table.builder()
+        Table woodTable = Table.builder()
                 .tableTop(TableComponent.builder()
                         .colors(Colors.DARK_BROWN)
                         .materials(Materials.Wood)
@@ -30,7 +30,7 @@ public class TableFactory {
                         .build())
                 .build();
 
-            Table plasticTable = table.toBuilder()
+            Table plasticTable = woodTable.toBuilder()
                     .tableTop(TableComponent.builder()
                             .colors(Colors.WHITE)
                             .materials(Materials.Plastic)
@@ -41,7 +41,7 @@ public class TableFactory {
                             .build())
                     .build();
 
-        System.out.println(table);
+        System.out.println(woodTable);
         System.out.println(plasticTable);
     }
 }
